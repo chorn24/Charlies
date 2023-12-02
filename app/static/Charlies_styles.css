@@ -1,0 +1,295 @@
+.landing_page {
+    background-image: url("images/Inside\ restaurant\,\ window\,\ space\ outside\ window\,\ in\ space\,\ restaurant\ in\ space\ s-3320784226.png");
+    background-size: cover;
+}
+
+.padmar {
+    margin: 0;
+    padding: 0;
+}
+
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: rgb(255, 230, 0);
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(255, 230, 0);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* gross yucky never use
+.testing{
+    background: -webkit-linear-gradient(#d358fc, red);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+*/
+
+
+.HeaderText {
+    color: rgb(197, 133, 250);
+    text-shadow: 2pt 2pt 2pt rgb(98, 55, 133), 2pt 2pt 2pt rgb(133, 127, 55);
+    font-size: 14pt;
+}
+
+.HeaderText:active {
+  color: rgb(68, 3, 122);
+  text-shadow: 2pt 2pt 2pt rgb(140, 0, 255), 2pt 2pt 2pt rgb(255, 234, 0);
+  font-size: 14pt;
+}
+
+.Center_the_boi {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.MainDiv {
+    font-family: cascadia code;
+    position: absolute;
+    background-color: rgba(242, 226, 255, 0.615);
+    width: 500pt;
+    height: 350pt;
+    top:15%;
+    right: 20%;
+    left: 20%;
+    text-align: center;
+    border-radius: 10pt;
+    display: grid;
+    place-items: center;
+}
+
+.headed {
+    font-family: cascadia code;
+    width: 100%;
+    height: 40pt;
+    background-image: linear-gradient(to right, #fff200,#fff200,rgb(174, 149, 47),rgb(86, 50, 112),rgb(75, 43, 98),rgb(64, 37, 84),rgb(46, 26, 61),rgb(29, 16, 40));
+    display:flex;
+    justify-content: space-evenly;
+}
+
+
+.Valign {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.head_image {
+    border-right: solid 3pt #fff200;
+    border-left: solid 3pt #fff200;
+    border-bottom: solid 3pt #fff200;
+}
+
+.STool {
+    border: 3pt solid white;
+}
+
+
+.HourTable {
+  font-family: Cascadia Code;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200pt;
+}
+
+
+.LocationTable {
+  font-size: 20pt;
+  font-family: Cascadia Code;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 310pt;
+}
+
+
+.starry {
+  background-image: url("images/pexels-felix-mittermeier-1146134.jpg");
+  background-size: cover;
+}
+
+.gigachad {
+  background-image: url("images/giga.jpg");
+  background-size: cover;
+}
+
+.ChopDiv {
+  border-radius: 20pt;
+  border: rgb(255, 255, 83) solid 3pt;
+  background-color: rgb(39, 0, 61);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400pt;
+  height: 400pt;
+}
+
+.hiddenbtn1 {
+  cursor: pointer;
+}
+
+.hidden {
+  opacity: 0;
+  position: absolute;
+  width: 40pt;
+  height: 20pt;
+  bottom: 0%;
+}
+
+.hidden2 {
+  opacity: 0;
+  margin-left: auto;
+  text-align: right;
+  width: 40pt;
+  height: 20pt;
+}
+
+.AboutUs1 {
+  margin-right: auto;
+  margin-left: auto;
+  width: 500pt;
+  height: 300pt;
+}
+
+.AboutUs2 {
+  background-color: #fff200;
+}
+
+.location_hour_Div{
+  width: 700pt;
+  height: 365pt;
+  display: flex;
+  justify-content: space-between;
+}
+
+.LocationDiv1 {
+  width: 330pt;
+  height: 280pt;
+  border: rgb(255, 255, 152) solid 3pt;
+  border-radius: 15pt;
+}
+
+.LocationDiv2 {
+  background-color: rgb(147, 112, 168);
+  width: 316pt;
+  height: 266pt;
+  border: rgb(38, 14, 61) solid 7pt; 
+  border-radius: 12pt;
+}
+
+.HoursFont {
+  text-align: center;
+  font-family: Cascadia Code;
+  font-size: 20pt;
+  color: rgb(237, 205, 255);
+}
+
+.HoursDiv1 {
+  width: 220pt;
+  height: 170pt;
+  border: rgb(255, 255, 152) solid 3pt;
+  border-radius: 15pt;
+}
+
+.HoursDiv2 {
+  background-color: rgb(147, 112, 168);
+  width: 206pt;
+  height: 156pt;
+  border: rgb(38, 14, 61) solid 7pt; 
+  border-radius: 12pt;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.slider {
+    width: 100%;
+    max-width: 800px;
+    height: 350px;
+    position: relative;
+    overflow: hidden; /* <===  */
+    border-radius: 15px;
+  }
+  
+  .slide {
+    width: 100%;
+    max-width: 800px;
+    height: 350px;
+    position: absolute;
+    transition: all 0.5s;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    z-index: 10px;
+    cursor: pointer;
+    color: #fff200;
+    background-color: rgb(34, 13, 64);
+    font-size: 18px;
+  }
+  .btn:active {
+    transform: scale(1.2);
+  }
+  .btn-prev {
+    top: 45%;
+    left: 2%;
+  }
+  
+  .btn-next {
+    top: 45%;
+    right: 2%;
+  }

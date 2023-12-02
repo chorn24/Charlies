@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="MainDiv Center_the_boi">
+    <div class="slider">
+        <div class="slide">
+          <img src="{% static "images/sandwich1.jpg" %}" alt=""/>
+        </div>
+        <div class="slide">
+          <img src="{% static "images/soup2.jpg" %}" alt="" />
+        </div>
+        <div class="slide">
+          <img src="{% static "images/pizza.jpg" %}" alt="" />
+        </div>
+        <div class="slide">
+          <img src="{% static "images/salad1.jpg" %}" alt="" />
+        </div>
+        <button class="btn btn-next">></button>
+        <button class="btn btn-prev"><</button>
+      </div>
+      <script src="{% static "main.js" %}"></script>
+</div>
+<div class="hidden">
+  <a href="{% url "chop" %}"><button class="hiddenbtn1">Test</button></a>
+</div>
+<div class="hidden2">
+  <a href="{% url "GIGA" %}"><button class="hiddenbtn1">Test</button></a>
+</div>
+{% endblock content %}
