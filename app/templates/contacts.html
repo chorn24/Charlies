@@ -1,5 +1,73 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-
+<br><br>
+<div class="Divorce">
+    <div class="Contact3">
+        <div class="Contact4">
+            <h2 class="HoursFont2">Contacts:</h2>
+            <a href=""><p>CharlieAmusement@Email.com</p></a>
+            <a href=""><p>DeliahAmusement@Email.com</p></a>
+            <a href=""><p>BobRob@Bob.com</p></a>
+            <a href=""><p>SarahAliance@Email.com</p></a>
+            <a href=""><p>Friend@Rat.com</p></a>
+            <a href=""><p>RealName@Email.com</p></a>
+            <a href=""><p>SharranLia@Email.com</p></a>
+        </div>
+    </div>
+<div class="Contact1">
+    <div class="Contact2">
+        <form action="{% url "CONTACTS" %}" method="GET">
+            <div class="HoursFont2">
+                <h2>Apply:</h2>
+            </div>
+            <table class="ContactsTable">
+                <label>
+                <tr>
+                    <td class="ApplyLabel">
+                        First Name:
+                    </td>
+                    <td class="ApplyInput">
+                        <input type="text" name="FirstName" class="Name">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ApplyLabel">
+                        Last Name:
+                    </td>
+                    <td class="ApplyInput">
+                        <input type="text" name="LastName" class="Name">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ApplyLabel">
+                        Email:
+                    </td>
+                    <td class="ApplyInput">
+                        <input type="text" name="InputEmail" class="Email_Phone">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ApplyLabel">
+                        Phone Number:
+                    </td>
+                    <td class="ApplyInput">
+                        <input type="number" name="Phone"class="Email_Phone">
+                    </td>
+                </tr>
+            </label>
+            </table>
+            <br>
+            <div class="ApplyButtonDiv">
+                <button class="ApplyButton">Apply</button>
+            </div>
+        </form>
+        <div class="endtext">
+            {% if FirstName is not None %}
+            <p>Thanks for applying, {{FirstName}} {{LastName}}, we will keep in contact and send you a email to: {{InputEmail}}!</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+</div>
 {% endblock content %}

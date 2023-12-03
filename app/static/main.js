@@ -39,3 +39,9 @@ prevSlide.addEventListener("click", function () {
     slide.style.transform = `translateX(${100 * (indx - CurrentSlide)}%)`;
   });
 });
+
+
+function Applied() {
+  var element = document.getElementsByClassName("ApplyButton");
+  element.classList.replace("ApplyButton","ApplyButton_submit");
+}

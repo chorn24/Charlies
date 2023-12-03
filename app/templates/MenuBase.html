@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="padmar">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">  
+        <title>Charlie's Diner</title>
+        <link rel="icon" type="image/x-icon" href="{% static "images/Charlie's_Big.png" %}">
+        <link rel="stylesheet" href="{% static "Charlies_styles.css" %}">
+    </head>
+    <body class="starry padmar">
+        <header class="headed">
+            <a href="{% url "HUB" %}"><img src="{% static "images/Charlie's_wide.png" %}" height="80" class="head_image"></a>
+            <a href={% url "LOCATION" %}><h2 class="HeaderText hover-underline-animation">Location and Hours</h2></a>
+            <a href={% url "MENU" %}><h2 class="HeaderText hover-underline-animation">Menu</h2></a>
+            <a href={% url "ABOUT" %}><h2 class="HeaderText hover-underline-animation">About Us</h2></a>
+            <a href={% url "CONTACTS" %}><h2 class="HeaderText hover-underline-animation">Contacts</h2></a>
+        </header>
+        {% block content %}{% endblock content %}
+    </body>
+</html>
