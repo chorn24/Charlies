@@ -4,34 +4,66 @@
 <br><br><br>
 <div class="Menu1">
     <div class="Menu2">
-        <h2 class="HoursFont2">Pizza</h2>
-        <div>
-            <div>Cheese</div>
-            <div>Pepperoni</div>
-            <div>Supreme</div>
-            <div>Margherita</div>
+        <Div class="HoursFont2">
+            <br>
+            <a href="#Pizza"><button class="MenuNav">Pizza</button></a>
+            <a href="#Sandwich"><button class="MenuNav">Sandwich</button></a>
+            <a href="#Soup"><button class="MenuNav">Soup</button></a>
+            <a href="#Salad"><button class="MenuNav">Salad</button></a>
         </div>
-        <h2 class="HoursFont2">Sandwhiches</h2>
+        <form action="{% url "MENU" %}" method="GET">
+        <label>
+        <h2 class="HoursFont2"  id="Pizza">Pizza</h2>
         <div>
-            <div>Club Sandwhich</div>
-            <div>Grilled Chicken</div>
-            <div>French Dip</div>
-            <div>Turkey</div>
+            <div><div><img src="{% static "images/CPizza.jpg" %}" alt="" width="150pt"/></div>Cheese Pizza: $4.00<div>made with Tomato Sauce and Mozzarella Cheese</div><div><input type="Number" name="CPizza" class="Order"></div></div>
+            <br>
+            <div><div><img src="{% static "images/PPizza.jpg" %}" alt="" width="150pt"/></div>Pepperoni Pizza: $5.00<div>made with Tomato Sauce, Mozzarella Cheese, and Pepperoni</div><div><input type="Number" name="PPizza" class="Order"></div></div>
+            <br>
+            <div><div><img src="{% static "images/SPizza.png" %}" alt="" width="150pt"/></div>Supreme Pizza: $6.00<div>made with Tomato Sauce, Mozzarella Cheese, and Pepperoni,Sausage, Green Bell Peppers, Ground Beef, Black Olives, Ham, Mushrooms, and Red Onions</div><div><input type="Number" name="SPizza" class="Order"></div></div>
+            <br>
+            <div><div><img src="{% static "images/MPizza.jpg" %}" alt="" width="150pt" Height="150pt"/></div>Margharita Pizza: $4.50<div>made with Tomato Sauce, Mozzarella Cheese, Sliced Tomatoes, and Basil</div><div><input type="Number" name="MPizza" class="Order"></div></div>
         </div>
-        <h2 class="HoursFont2">Soup</h2>
+        <h2 class="HoursFont2" id="Sandwich">Sandwhiches</h2>
         <div>
-            <div>Potato</div>
-            <div>Tomato</div>
-            <div>Vegetable</div>
-            <div>Miso</div>
+            <div><div><img src="{% static "images/CSandwich.jpg" %}" alt="" width="150pt"/></div>Club Sandwich: $6.00<div>made with Toasted multi-grain bread, Bacon, Ham, Turkey, Avacado, Mayonnaise, Romaine lettuce, and Sliced tomato</div><div><input type="Number" name="CSandwich" class="Order"></div></div>
+            <br>
+            <div><div><img src="{% static "images/GSandwich.jpg" %}" alt="" width="150pt"/></div>Grilled Chicken Sandwich: $5.50<div>made with Toasted multi-grain bread, Grilled Chicken, Romaine lettuce, and Sliced tomato</div><div><input type="Number" name="GSandwich" class="Order"></div></div>
+            <br>
+            <div><div><img src="{% static "images/FSandwich.jpg" %}" alt="" width="150pt" Height="150pt"/></div>French Dip: $5.00<div>made with French Rolls, Beef chuck roast, Beef Broth, French Onion Soup, Worcestershire sauce, and Provolone cheese</div><div><input type="Number" name="FSandwich" class="Order"></div></div>
+            <br>
+            <div><div><img src="{% static "images/TSandwich.jpg" %}" alt="" width="150pt"/></div>Turkey BLT: $4.50<div>made with Whole-wheat bread, Mayonnaise, Lettuce, Tomato slices, Thinly cut Turkey, Bacon, and Avacado</div><div><input type="Number" name="TSandwich" class="Order"></div></div>
         </div>
-        <h2 class="HoursFont2">Salads</h2>
+        <h2 class="HoursFont2" id="Soup">Soup</h2>
         <div>
-            <div>Green</div>
-            <div>Ceaser</div>
-            <div>Greek</div>
-            <div>Garden</div>
+            <div><div><img src="{% static "images/PSoup.jpeg" %}" alt="" width="150pt"/></div>Potato: $6.00<div>made with Potatoes, Bacon, Onion,Garlic, Chicken broth, Cream, and Cheddar cheese</div><div><input type="Number" name="PSoup" class="Order"></div></div>
+            <br>
+            <div><div><img src="{% static "images/TSoup.jpg" %}" alt="" width="150pt"/></div>Tomato: $6.00<div>made with Tomatoes, Onions, Chicken Broth, Celery, and Honey</div><div><input type="Number" name="TSoup" class="Order"></div></div>
+            <br>
+            <div><div><img src="{% static "images/VSoup.jpg" %}" alt="" width="150pt"/></div>Vegetable: $6.50<div>made with Sweet Potato, Red and Yellow Bell pepper, Carrots, Garlic, Red Onion, Vegetable Stock, Parmesan, Thyme</div><div><input type="Number" name="PSoup" class="Order"></div></div>
+            <br>
+            <div><div><img src="{% static "images/MSoup.jpg" %}" alt="" width="150pt"/></div>Miso: $4.50<div>made with Vegetable Broth, Leek, Shiitake mushrooms, Seaweed, Soy Sauce, Mirin, Miso Paste, Wilatable greens, Tofu, Sesame Seeds</div><div><input type="Number" name="MSoup" class="Order"></div></div>
         </div>
+        <h2 class="HoursFont2" id="Salad">Salads</h2>
+        <div>
+            <div><div><img src="{% static "images/GGSalad.jpg" %}" alt="" width="150pt"/></div>Green Salad: $5.00<div>made with Lettuce, Lemon Vinaigrette, Cucumber, Parmesan cheese, Pepitas, Avacado, Microgreens, Almonds</div><div><input type="Number" name="GGSalad" class="Order"></div></div>
+            <br>
+            <div><div><img src="{% static "images/CSalad.jpg" %}" alt="" width="150pt"/></div>Caeser Salad: $5.00<div>made with Romaine lettuce, Parmesan cheese, Croutons, Caeser Dressing</div><div><input type="Number" name="CSalad" class="Order"></div></div>
+            <br>
+            <div><div><img src="{% static "images/GSalad.jpg" %}" alt="" width="150pt" /></div>Greek Salad: $5.00<div>made with Cucumbers, Tomatoes, Red onions, Black olives, Chickpease, Feta cheese, and Greek dressing</div><div><input type="Number" name="GSalad" class="Order"></div></div>
+            <br>
+            <div><div><img src="{% static "images/GASalad.jpg" %}" alt="" width="150pt"/></div>Garden Salad: $5.00<div>made with Romaine lettuce, Tomatoes, Cucumber, Sweet Red pepper, Red Onion, Parsley, Basil, Mint</div><div><input type="Number" name="GASalad" class="Order"></div></div>
+        </div>
+        </label>
+        <button>Order</button>
+        </form>
+        <br>
+        {% if Total is not None %}
+        <p>test</p>
+        {% endif %}
+    </div>
+    <!--<div class="Receipt">
+        <div class="BottomLine">Total:<p>{{Total}}</P></div>
+    </div>-->
     </div>
 </div>
 {% endblock content %}
