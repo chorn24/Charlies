@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http.response import HttpResponse
 from django.http.request import HttpRequest
-from app.forms import ApplyForm,MenuForm
+from app.forms import ApplyForm, MenuForm
 
 
 # Create your views here.
@@ -47,7 +47,7 @@ def location_hour(request: HttpRequest):
     return render(request, "location_hour.html")
 
 
-def menu(request: HttpRequest):
+def menu(request):
     form = MenuForm(request.GET)
     if form.is_valid():
         CPizza = form.cleaned_data["CPizza"]
@@ -80,7 +80,7 @@ def menu(request: HttpRequest):
             GSandwich = 0
         if FSandwich == None or FSandwich == "":
             FSandwich = 0
-        if TSandwich == None or TSandwich== "":
+        if TSandwich == None or TSandwich == "":
             TSandwich = 0
         if PSoup == None or PSoup == "":
             PSoup = 0
@@ -94,7 +94,7 @@ def menu(request: HttpRequest):
             GGSalad = 0
         if CSalad == None or CSalad == "":
             CSalad = 0
-        if GSalad == None or GSalad == "": 
+        if GSalad == None or GSalad == "":
             GSalad = 0
         if GASalad == None or GASalad == "":
             GASalad = 0
@@ -132,6 +132,46 @@ def menu(request: HttpRequest):
             + GSaladTOTAL
             + GASaladTOTAL
         )
-        return render(request,"menu.html",{"form": form,"Total": Total,"CPizza":CPizza,"CPizzaTOTAL": CPizzaTOTAL,"PPizzaTOTAL": PPizzaTOTAL,"SPizzaTOTAL": SPizzaTOTAL,"MPizzaTOTAL": MPizzaTOTAL,"CSandwichTOTAL": CSandwichTOTAL,"GSandwichTOTAL": GSandwichTOTAL,"FSandwichTOTAL": FSandwichTOTAL,"TSandwichTOTAL": TSandwichTOTAL,"PSoupTOTAL": PSoupTOTAL,"TSoupTOTAL": TSoupTOTAL,"VSoupTOTAL": VSoupTOTAL,"MSoupTOTAL": MSoupTOTAL,"GGSaladTOTAL": GGSaladTOTAL,"CSaladTOTAL": CSaladTOTAL,"GSaladTOTAL": GSaladTOTAL,"GASaladTOTAL": GASaladTOTAL,})
+        return render(
+            request,
+            "menu.html",
+            {
+                "form": form,
+                "Total": Total,
+                "CPizza": CPizza,
+                "PPizza":PPizza,
+                "SPizza": SPizza,
+                "MPizza": MPizza,
+                "CSandwich": CSandwich,
+                "GSandwich": GSandwich,
+                "FSandwich": FSandwich,
+                "TSandwich": TSandwich,
+                "PSoup": PSoup,
+                "TSoup": TSoup,
+                "VSoup": VSoup,
+                "MSoup": MSoup,
+                "GGSalad": GGSalad,
+                "CSalad": CSalad,
+                "GSalad": GSalad,
+                "GASalad": GASalad,
+                "CPizzaTOTAL": CPizzaTOTAL,
+                "PPizzaTOTAL": PPizzaTOTAL,
+                "SPizzaTOTAL": SPizzaTOTAL,
+                "MPizzaTOTAL": MPizzaTOTAL,
+                "CSandwichTOTAL": CSandwichTOTAL,
+                "GSandwichTOTAL": GSandwichTOTAL,
+                "FSandwichTOTAL": FSandwichTOTAL,
+                "TSandwichTOTAL": TSandwichTOTAL,
+                "PSoupTOTAL": PSoupTOTAL,
+                "TSoupTOTAL": TSoupTOTAL,
+                "VSoupTOTAL": VSoupTOTAL,
+                "MSoupTOTAL": MSoupTOTAL,
+                "GGSaladTOTAL": GGSaladTOTAL,
+                "CSaladTOTAL": CSaladTOTAL,
+                "GSaladTOTAL": GSaladTOTAL,
+                "GASaladTOTAL": GASaladTOTAL,
+            },
+        )
     else:
-        return render(request, "menu.html")
+        Total = 9
+        return render(request, "menu.html", {"Total": Total, "form": form})

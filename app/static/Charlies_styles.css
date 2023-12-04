@@ -199,7 +199,7 @@
   margin-right: auto;
   margin-left: auto;
   width: 600pt;
-  height: 4500pt;
+  /*height: 5200pt;*/
   border-radius: 15pt;
 }
 
@@ -210,9 +210,27 @@
   border: rgb(38, 14, 61) solid 7pt;
   background-color: rgb(147, 112, 168);
   width: 586pt;
-  height: 4486pt;
+  /*height: 5186pt;*/
   border-radius: 12pt;
 }
+
+.Receipt {
+  border: solid 3pt rgb(53, 53, 53);
+  margin-left: auto;
+  margin-right: auto;
+  width: 300pt;
+  background-color: white;
+}
+
+.ReceiptSmall {
+  font-size: 15pt;
+}
+
+.BottomLine{
+  border-bottom: dashed 3pt rgb(32, 32, 32);
+}
+
+
 
 .MenuTable {
   width: 580pt;
@@ -405,18 +423,6 @@ html {
   border-radius: 12pt;
 }
 
-.Receipt {
-  border: solid 3pt rgb(53, 53, 53);
-  margin-left: auto;
-  margin-right: auto;
-  width: 300pt;
-  height: 530pt;
-  background-color: white;
-}
-
-.BottomLine{
-  border-bottom: dashed 3pt rgb(32, 32, 32);
-}
 
 
 
